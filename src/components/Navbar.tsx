@@ -1,49 +1,49 @@
-import { BrowserRouter, Link, Route, Router, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <>
       <div className="flex w-full text-white h-16 items-center justify-center py-10 px-2">
         <div className=" pr-12 font-extrabold cursor-pointer">
-          <img src="../../public/logo_dark.svg" className="h-7" alt="" />
+          <Link to="/">
+            <img src="../../public/logo_dark.svg" className="h-7" alt="" />
+          </Link>
         </div>
-        <BrowserRouter>
-          <div className="flex flex-1  cursor-pointer space-x-7 text-base font-medium ">
-            <Link
-              className="hover:underline  hover:underline-offset-8 hover:decoration-4 hover:decoration-blue-400 "
-              to="/Exams"
-            >
-              <p>Exams</p>
-            </Link>
-            <Link
-              className="hover:underline  hover:underline-offset-8 hover:decoration-4 hover:decoration-blue-400 "
-              to="/Programs"
-            >
-              Programs
-            </Link>
-            <Link
-              className="hover:underline  hover:underline-offset-8 hover:decoration-4 hover:decoration-blue-400 "
-              to="/Scholarships"
-            >
-              Scholarships
-            </Link>
-            <Link
-              className="relative hover:underline  hover:underline-offset-8 hover:decoration-4 hover:decoration-blue-400 pr-7 "
-              to="/Test-series"
-            >
-              Test Series
-              <span className=" absolute top-0 right-0 -translate-y-2 translate-x-2 bg-yellow-500 text-black text-xs px-1 py-0.5 rounded-r-full rounded-tl-full">
-                New
-              </span>
-            </Link>
-            <Link
-              className="hover:underline  hover:underline-offset-8 hover:decoration-4 hover:decoration-blue-400 "
-              to="/Study-materials"
-            >
-              Study Materials
-            </Link>
-          </div>
-        </BrowserRouter>
+        <div className="flex flex-1  cursor-pointer space-x-7 text-base font-medium ">
+          <Link
+            className="hover:underline  hover:underline-offset-8 hover:decoration-4 hover:decoration-blue-400 "
+            to="/Exams"
+          >
+            <p>Exams</p>
+          </Link>
+          <Link
+            className="hover:underline  hover:underline-offset-8 hover:decoration-4 hover:decoration-blue-400 "
+            to="/Programs"
+          >
+            Programs
+          </Link>
+          <Link
+            className="hover:underline  hover:underline-offset-8 hover:decoration-4 hover:decoration-blue-400 "
+            to="/Scholarships"
+          >
+            Scholarships
+          </Link>
+          <Link
+            className="relative hover:underline  hover:underline-offset-8 hover:decoration-4 hover:decoration-blue-400 pr-7 "
+            to="/Test-series"
+          >
+            Test Series
+            <span className=" absolute top-0 right-0 -translate-y-2 translate-x-2 bg-yellow-500 text-black text-xs px-1 py-0.5 rounded-r-full rounded-tl-full">
+              New
+            </span>
+          </Link>
+          <Link
+            className="hover:underline  hover:underline-offset-8 hover:decoration-4 hover:decoration-blue-400 "
+            to="/Study-materials"
+          >
+            Study Materials
+          </Link>
+        </div>
         <div className="w-1/5  flex space-x-4 items-center justify-end">
           <div className="bg-white text-allen_theme text-sm font-medium px-4 py-2 rounded-full flex space-x-2">
             <svg

@@ -13,7 +13,7 @@ export default function Dreams() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide(); // Automatically go to the next slide
-    }, 3000); // Change slide every 3 seconds
+    }, 5000); // Change slide every 3 seconds
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, [currentIndex]);
@@ -24,15 +24,10 @@ export default function Dreams() {
     );
   };
 
-  // Function to go to the previous slide
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex: number) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
-  };
+
   return (
-    <div className=" px-32 py-12 text-white flex   ">
-      <div className=" w-1/2">
+    <div className=" px-32 py-4 text-white flex    ">
+      <div className=" w-1/2 pt-12">
         <div className="text-white text-3xl font-extrabold  mb-16">
           <div>Your Dream.</div>
           <div>Our Experties.</div>
@@ -52,11 +47,11 @@ export default function Dreams() {
           </button>
         </div>
       </div>
-      <div className=" w-1/2 flex flexcol justify-center ">
-        <div className="relative w-full max-w-4xl mx-auto">
-          <div className="overflow-hidden ">
+      <div className=" w-1/2 flex flexcol justify-center  ">
+        <div className="relative w-full max-w-4xl mx-auto ">
+          <div className="overflow-hidden  ">
             <div
-              className="flex transition-transform duration-500 ease-in-out"
+              className="flex transition-transform duration-500 ease-in-out "
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {slides.map((slide, index) => (
